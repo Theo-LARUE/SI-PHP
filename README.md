@@ -8,6 +8,8 @@ groupe n°18 :
   Piotr BAJEK
 
 # Application web :
+
 – Front office de présentation du contenu 
 de votre choix 
+
 – Back office de gestion du contenu 
