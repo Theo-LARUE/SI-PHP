@@ -1,4 +1,4 @@
-# Si-PHP
+# SI-PHP
 
 # Semaine Intensive de PHP :
 groupe n°18 :
