@@ -27,17 +27,17 @@ DROP TABLE IF EXISTS `user`;
 CREATE TABLE `user` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `Name` varchar(45) DEFAULT NULL,
-  `First Name` varchar(20) DEFAULT NULL,
+  `FirstName` varchar(20) DEFAULT NULL,
   `Mail` varchar(255) DEFAULT NULL,
   `Birthday` date DEFAULT NULL,
   `Civility` tinyint(4) DEFAULT NULL,
   `Height` float DEFAULT NULL,
   `Weight` float DEFAULT NULL,
-  `Rôle_id` int(11) NOT NULL,
+  `Role_id` int(11) NOT NULL,
   PRIMARY KEY (`id`),
-  KEY `fk_User_Rôle_idx` (`Rôle_id`),
-  CONSTRAINT `fk_User_Rôle` FOREIGN KEY (`Rôle_id`) REFERENCES `role` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+  KEY `fk_User_Role_idx` (`Role_id`),
+  CONSTRAINT `fk_User_Role` FOREIGN KEY (`Role_id`) REFERENCES `role` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -46,7 +46,7 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES (1,'Test1','personne','test1.personne@hotmail.com','1997-05-23',1,172,80,2),(2,'Test2','personne2','test2.pesgezg@hotmail.com','1977-05-21',1,180,80,2),(3,'Test3','personne3','zevzevzev@gmail.com','1958-12-25',0,170,75,1),(4,'Test4','personne4','gzgzegzegz@yahoo.fr','1999-12-31',1,190,90,2);
+INSERT INTO `user` VALUES (16,'Test1','essai1','test1@gmail.com','1997-05-23',1,172,74,2),(17,'Test2','essai2','test2@hotmail.com','1997-03-15',0,186,80,2),(18,'Test3','essai3','test3@hotmail.fr','1999-12-30',0,190,91,1),(19,'Test4','essai4','test4@yahoo.fr','2000-03-19',1,165,65,2),(20,'Test5','essai5','test5@gmail.fr','1993-05-18',1,149,70,1),(21,'Test6','essai6','gzergzegzeg@gzgzeg','2000-05-23',1,198,93,1);
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -59,4 +59,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-02-13 14:26:53
+-- Dump completed on 2018-02-13 16:09:41

@@ -28,14 +28,14 @@ CREATE TABLE `reservation` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `Date` date DEFAULT NULL,
   `Place` int(3) DEFAULT '300',
-  `User_id` int(11) NOT NULL,
   `Destination_id` int(11) NOT NULL,
+  `User_id` int(11) NOT NULL,
   PRIMARY KEY (`id`),
-  KEY `fk_Reservation_User1_idx` (`User_id`),
   KEY `fk_Reservation_Destination1_idx` (`Destination_id`),
+  KEY `fk_Reservation_User1_idx` (`User_id`),
   CONSTRAINT `fk_Reservation_Destination1` FOREIGN KEY (`Destination_id`) REFERENCES `destination` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `fk_Reservation_User1` FOREIGN KEY (`User_id`) REFERENCES `user` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -44,7 +44,7 @@ CREATE TABLE `reservation` (
 
 LOCK TABLES `reservation` WRITE;
 /*!40000 ALTER TABLE `reservation` DISABLE KEYS */;
-INSERT INTO `reservation` VALUES (1,'2018-05-12',268,2,4),(2,'2018-12-11',120,3,5),(3,'2018-12-23',23,1,2);
+INSERT INTO `reservation` VALUES (1,'2018-06-15',200,2,3),(2,'2019-08-23',125,4,2),(3,'2018-10-10',295,1,4),(4,'2020-12-30',10,3,1);
 /*!40000 ALTER TABLE `reservation` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -57,4 +57,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-02-13 14:26:53
+-- Dump completed on 2018-02-13 16:09:41

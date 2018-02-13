@@ -26,7 +26,7 @@ DROP TABLE IF EXISTS `destination`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `destination` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `Planet Name` varchar(45) DEFAULT NULL,
+  `PlanetName` varchar(45) DEFAULT NULL,
   `Time` int(11) DEFAULT NULL,
   `Distance` float DEFAULT NULL,
   `Price` int(11) DEFAULT NULL,
@@ -41,7 +41,7 @@ CREATE TABLE `destination` (
 
 LOCK TABLES `destination` WRITE;
 /*!40000 ALTER TABLE `destination` DISABLE KEYS */;
-INSERT INTO `destination` VALUES (1,'Moon',6,300000,650,'img1'),(2,'Jupiter',21,15632300,1253,'img2'),(3,'Mars',14,16526400,953,'img3'),(4,'Saturne',24,3135550,1000,'img4'),(5,'Venus',12,331552,560,'img5');
+INSERT INTO `destination` VALUES (1,'Venus',5,356626,500,'img1'),(2,'Mars',7,330066,750,'img2'),(3,'Jupiter',10,2634530,1000,'img3'),(4,'Saturne',15,26233300,1500,'img4'),(5,'Uranus',20,6432430,2500,'img5');
 /*!40000 ALTER TABLE `destination` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -54,4 +54,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-02-13 14:26:53
+-- Dump completed on 2018-02-13 16:09:41
