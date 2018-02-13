@@ -1,6 +1,6 @@
 # SI-PHP
 
-# Semaine Intensive de PHP :
+## Semaine Intensive de PHP :
 groupe n°18 :
 
     Théo LARUE
@@ -11,7 +11,7 @@ groupe n°18 :
 
     Piotr BAJEK
 
-# Application web :
+## Application web :
 
 – Front office de présentation du contenu 
 de votre choix 
