@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="shortcut icon" href="img/favicon.png">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/font.css">
+  <link rel="stylesheet" href="css/planets.css">
+  <script src="scripts/particles.min.js"></script>
+  <title>Halan</title>
+</head>
+
+<body>
+  <div id="particles-js"></div>
+
+  <header>
+    <div class="headerContainer">
+      <div class="logoContainer">
+        <a href="index.html">
+          <img class="logoImg" src="img/logo_gradient_Gradient.svg" alt="Logo Halan">
+        </a>
+      </div>
+
+      <div class="menuContainer">
+        <a class="menuItem-link" href="">destinations</a>
+        <a class="menuItem-link" href="">about</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="steps">
+    <div class="stepsContainer">
+      <h4 class="step step1">1</h4>
+      <div class="stepSeparator1"></div>
+      <h4 class="step step2">2</h4>
+      <div class="stepSeparator2"></div>
+      <h4 class="step step3">3</h4>
+    </div>
+  </section>
+
+  <div class="title">
+    <h2>Select your destination</h2>
+  </div>
+
+  <section class="carousel">
+    <div class="carouselWrapper">
+      <div class="carouselItem">
+        <img class="carouselImg" src="img/mars-transparent.png" alt="">
+        <h3>Mars</h3>
+        <div class="carouselInfoContainer">
+          <div class="carouselInfo">
+            <h4 class="infoTitle">Flight Time</h4>
+            <p>9 hours</p>
+          </div>
+          <div class="carouselInfo">
+            <h4 class="infoTitle">Distance from Earth</h4>
+            <p>75,3 millions km</p>
+          </div>
+          <div class="carouselInfo">
+            <h4 class="infoTitle">Price</h4>
+            <p>From 400€</p>
+          </div>
+        </div>
+      </div>
+      <div class="carouselItem">
+        <img class="carouselImg" src="img/europa-transparent.png" alt="">
+        <h3>Europe</h3>
+        <!-- <div class="carouselInfoContainer">
+          <div class="carouselInfo">
+            <h4 class="infoTitle">Flight Time</h4>
+            <p>9 hours</p>
+          </div>
+          <div class="carouselInfo">
+            <h4 class="infoTitle">Distance from Earth</h4>
+            <p>75,3 millions km</p>
+          </div>
+          <div class="carouselInfo">
+            <h4 class="infoTitle">Price</h4>
+            <p>From 400€</p>
+          </div>
+        </div> -->
+      </div>
+      <div class="carouselItem">
+        <img class="carouselImg" src="img/moon-transparent.png" alt="">
+        <h3>Moon</h3>
+        <!-- <div class="carouselInfoContainer">
+          <div class="carouselInfo">
+            <h4 class="infoTitle">Flight Time</h4>
+            <p>9 hours</p>
+          </div>
+          <div class="carouselInfo">
+            <h4 class="infoTitle">Distance from Earth</h4>
+            <p>75,3 millions km</p>
+          </div>
+          <div class="carouselInfo">
+            <h4 class="infoTitle">Price</h4>
+            <p>From 400€</p>
+          </div>
+        </div> -->
+      </div>
+      <div class="carouselItem">
+        <img class="carouselImg" src="img/xenion500-transparent.png" alt="">
+        <h3>Xenion 500</h3>
+        <!-- <div class="carouselInfoContainer">
+          <div class="carouselInfo">
+            <h4 class="infoTitle">Flight Time</h4>
+            <p>9 hours</p>
+          </div>
+          <div class="carouselInfo">
+            <h4 class="infoTitle">Distance from Earth</h4>
+            <p>75,3 millions km</p>
+          </div>
+          <div class="carouselInfo">
+            <h4 class="infoTitle">Price</h4>
+            <p>From 400€</p>
+          </div>
+        </div> -->
+      </div>
+      <div class="carouselItem">
+        <img class="carouselImg" src="img/mercury-transparent.png" alt="">
+        <h3>Mercury</h3>
+        <!-- <div class="carouselInfoContainer">
+          <div class="carouselInfo">
+            <h4 class="infoTitle">Flight Time</h4>
+            <p>9 hours</p>
+          </div>
+          <div class="carouselInfo">
+            <h4 class="infoTitle">Distance from Earth</h4>
+            <p>75,3 millions km</p>
+          </div>
+          <div class="carouselInfo">
+            <h4 class="infoTitle">Price</h4>
+            <p>From 400€</p>
+          </div>
+        </div> -->
+      </div>
+      <div class="carouselItem">
+        <img class="carouselImg" src="img/venus-transparent.png" alt="">
+        <h3>Venus</h3>
+        <!-- <div class="carouselInfoContainer">
+          <div class="carouselInfo">
+            <h4 class="infoTitle">Flight Time</h4>
+            <p>9 hours</p>
+          </div>
+          <div class="carouselInfo">
+            <h4 class="infoTitle">Distance from Earth</h4>
+            <p>75,3 millions km</p>
+          </div>
+          <div class="carouselInfo">
+            <h4 class="infoTitle">Price</h4>
+            <p>From 400€</p>
+          </div>
+        </div> -->
+      </div>
+    </div>
+  </section>
+
+  <div class="buttonContainer">
+    <form>
+      <input class="continueButton" type="button" value="Continue" onclick="window.location.href='booking.html'"/>
+    </form>
+  </div>
+
+
+  <script type="text/javascript">
+    particlesJS("particles-js", {
+      "particles": {
+        "number": {
+          "value": 355,
+          "density": {
+            "enable": true,
+            "value_area": 789.1476416322727
+          }
+        },
+        "color": {
+          "value": "#ffffff"
+        },
+        "shape": {
+          "type": "circle",
+          "stroke": {
+            "width": 0,
+            "color": "#000000"
+          },
+          "polygon": {
+            "nb_sides": 5
+          },
+          "image": {
+            "src": "img/github.svg",
+            "width": 100,
+            "height": 100
+          }
+        },
+        "opacity": {
+          "value": 0.48927153781200905,
+          "random": false,
+          "anim": {
+            "enable": true,
+            "speed": 0.2,
+            "opacity_min": 0,
+            "sync": false
+          }
+        },
+        "size": {
+          "value": 2,
+          "random": true,
+          "anim": {
+            "enable": true,
+            "speed": 2,
+            "size_min": 0,
+            "sync": false
+          }
+        },
+        "line_linked": {
+          "enable": false,
+          "distance": 150,
+          "color": "#ffffff",
+          "opacity": 0.4,
+          "width": 1
+        },
+        "move": {
+          "enable": true,
+          "speed": 0.2,
+          "direction": "none",
+          "random": true,
+          "straight": false,
+          "out_mode": "out",
+          "bounce": false,
+          "attract": {
+            "enable": false,
+            "rotateX": 600,
+            "rotateY": 1200
+          }
+        }
+      },
+      "interactivity": {
+        "detect_on": "canvas",
+        "events": {
+          "onhover": {
+            "enable": true,
+            "mode": "bubble"
+          },
+          "onclick": {
+            "enable": true,
+            "mode": "push"
+          },
+          "resize": true
+        },
+        "modes": {
+          "grab": {
+            "distance": 400,
+            "line_linked": {
+              "opacity": 1
+            }
+          },
+          "bubble": {
+            "distance": 83.91608391608392,
+            "size": 1,
+            "duration": 3,
+            "opacity": 1,
+            "speed": 3
+          },
+          "repulse": {
+            "distance": 200,
+            "duration": 0.4
+          },
+          "push": {
+            "particles_nb": 4
+          },
+          "remove": {
+            "particles_nb": 2
+          }
+        }
+      },
+      "retina_detect": true
+    });
+  </script>
+
+
+</body>
+
+</html>
