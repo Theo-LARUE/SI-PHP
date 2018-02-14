@@ -45,124 +45,67 @@
     <h2>Select your destination</h2>
   </div>
 
-  <section class="carousel">
-    <div class="carouselWrapper">
-      <div class="carouselItem">
-        <img class="carouselImg" src="img/mars-transparent.png" alt="">
-        <h3>Mars</h3>
-        <div class="carouselInfoContainer">
-          <div class="carouselInfo">
-            <h4 class="infoTitle">Flight Time</h4>
-            <p>9 hours</p>
+  <section class="planetsContainer">
+
+    <form class="planetsForm" name="planetSelection" method="post" action="booking.html">
+      <div class="gridContainer">
+
+        <div class="planetCell">
+          <input id="planet1" class="planetButton" type="radio" name="radio" value="1"/>
+          <div class="gridItem">
+            <img class="planetImg" src="img/moon-transparent.png" alt="">
+            <label for="planet1" class="planetLabel">Moon</label>
           </div>
-          <div class="carouselInfo">
-            <h4 class="infoTitle">Distance from Earth</h4>
-            <p>75,3 millions km</p>
+        </div>
+
+        <div class="planetCell">
+          <input id="planet2" class="planetButton" type="radio" name="radio" value="1"/>
+          <div class="gridItem">
+            <img class="planetImg" src="img/mars-transparent.png" alt="">
+            <label for="planet2" class="planetLabel">Mars</label>
           </div>
-          <div class="carouselInfo">
-            <h4 class="infoTitle">Price</h4>
-            <p>From 400€</p>
+        </div>
+
+        <div class="planetCell">
+          <input id="planet3" class="planetButton" type="radio" name="radio" value="1"/>
+          <div class="gridItem">
+            <img class="planetImg" src="img/mercury-transparent.png" alt="">
+            <label for="planet3" class="planetLabel">Mercury</label>
+          </div>
+        </div>
+
+        <div class="planetCell">
+          <input id="planet4" class="planetButton" type="radio" name="radio" value="1"/>
+          <div class="gridItem">
+            <img class="planetImg" src="img/venus-transparent.png" alt="">
+            <label for="planet4" class="planetLabel">Venus</label>
+          </div>
+        </div>
+
+        <div class="planetCell">
+          <input id="planet5" class="planetButton" type="radio" name="radio" value="1"/>
+          <div class="gridItem">
+            <img class="planetImg" src="img/xenion500-transparent.png" alt="">
+            <label for="planet5" class="planetLabel">Xenion 500</label>
+          </div>
+        </div>
+
+        <div class="planetCell">
+          <input id="planet6" class="planetButton" type="radio" name="radio" value="1"/>
+          <div class="gridItem">
+            <img class="planetImg" src="img/europe-transparent.png" alt="">
+            <label for="planet6" class="planetLabel">Europe</label>
           </div>
         </div>
       </div>
-      <div class="carouselItem">
-        <img class="carouselImg" src="img/europa-transparent.png" alt="">
-        <h3>Europe</h3>
-        <!-- <div class="carouselInfoContainer">
-          <div class="carouselInfo">
-            <h4 class="infoTitle">Flight Time</h4>
-            <p>9 hours</p>
-          </div>
-          <div class="carouselInfo">
-            <h4 class="infoTitle">Distance from Earth</h4>
-            <p>75,3 millions km</p>
-          </div>
-          <div class="carouselInfo">
-            <h4 class="infoTitle">Price</h4>
-            <p>From 400€</p>
-          </div>
-        </div> -->
+
+      <div class="buttonContainer">
+        <input class="continueButton" type='submit' name='continue' value="Continue">
       </div>
-      <div class="carouselItem">
-        <img class="carouselImg" src="img/moon-transparent.png" alt="">
-        <h3>Moon</h3>
-        <!-- <div class="carouselInfoContainer">
-          <div class="carouselInfo">
-            <h4 class="infoTitle">Flight Time</h4>
-            <p>9 hours</p>
-          </div>
-          <div class="carouselInfo">
-            <h4 class="infoTitle">Distance from Earth</h4>
-            <p>75,3 millions km</p>
-          </div>
-          <div class="carouselInfo">
-            <h4 class="infoTitle">Price</h4>
-            <p>From 400€</p>
-          </div>
-        </div> -->
-      </div>
-      <div class="carouselItem">
-        <img class="carouselImg" src="img/xenion500-transparent.png" alt="">
-        <h3>Xenion 500</h3>
-        <!-- <div class="carouselInfoContainer">
-          <div class="carouselInfo">
-            <h4 class="infoTitle">Flight Time</h4>
-            <p>9 hours</p>
-          </div>
-          <div class="carouselInfo">
-            <h4 class="infoTitle">Distance from Earth</h4>
-            <p>75,3 millions km</p>
-          </div>
-          <div class="carouselInfo">
-            <h4 class="infoTitle">Price</h4>
-            <p>From 400€</p>
-          </div>
-        </div> -->
-      </div>
-      <div class="carouselItem">
-        <img class="carouselImg" src="img/mercury-transparent.png" alt="">
-        <h3>Mercury</h3>
-        <!-- <div class="carouselInfoContainer">
-          <div class="carouselInfo">
-            <h4 class="infoTitle">Flight Time</h4>
-            <p>9 hours</p>
-          </div>
-          <div class="carouselInfo">
-            <h4 class="infoTitle">Distance from Earth</h4>
-            <p>75,3 millions km</p>
-          </div>
-          <div class="carouselInfo">
-            <h4 class="infoTitle">Price</h4>
-            <p>From 400€</p>
-          </div>
-        </div> -->
-      </div>
-      <div class="carouselItem">
-        <img class="carouselImg" src="img/venus-transparent.png" alt="">
-        <h3>Venus</h3>
-        <!-- <div class="carouselInfoContainer">
-          <div class="carouselInfo">
-            <h4 class="infoTitle">Flight Time</h4>
-            <p>9 hours</p>
-          </div>
-          <div class="carouselInfo">
-            <h4 class="infoTitle">Distance from Earth</h4>
-            <p>75,3 millions km</p>
-          </div>
-          <div class="carouselInfo">
-            <h4 class="infoTitle">Price</h4>
-            <p>From 400€</p>
-          </div>
-        </div> -->
-      </div>
-    </div>
+
+    </form>
   </section>
 
-  <div class="buttonContainer">
-    <form>
-      <input class="continueButton" type="button" value="Continue" onclick="window.location.href='booking.html'"/>
-    </form>
-  </div>
 
 
   <script type="text/javascript">

@@ -110,7 +110,7 @@ h5 {
   margin-bottom: 30px;
 }
 
-.fromPassengersContainer {
+.fromPriceContainer {
   display: flex;
   flex-direction: column;
 }
@@ -170,8 +170,6 @@ h5 {
   border-top-color: #FFF;
 }
 
-
-
 .gridContainer {
   display: grid;
   width: 100%;
@@ -223,18 +221,6 @@ h5 {
 .priceDisplay {
   font-size: 54px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 .buttonContainer {
   display: flex;
