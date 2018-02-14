@@ -3,7 +3,7 @@ body {
 }
 
 h5 {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 #particles-js canvas {
@@ -72,7 +72,7 @@ h5 {
 .stepSeparator2 {
   width: 120px;
   height: 1px;
-  background-color: #808080;
+  background-color: #221BE6;
 }
 
 .step {
@@ -87,6 +87,10 @@ h5 {
   color: #221BE6;
 }
 
+.step3 {
+  color: #221BE6;
+}
+
 .title {
   text-align: center;
   margin-bottom: 40px;
@@ -94,29 +98,21 @@ h5 {
 
 .mainContainer {
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
+  height: 350px;
 }
 
-.destinationContainer {
+.informationForm {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.selectedPlanet {
-  width: 270px;
-  margin-bottom: 30px;
-}
-
-.fromContainer {
-  margin-bottom: 100px;
-}
-
 .select-wrapper {
   position: relative;
-  width: 400px;
+  width: 100%;
   border: 2px solid #221BE6;
 }
 
@@ -124,18 +120,32 @@ h5 {
   color: #fff;
   font-family: Avenir-Book;
   font-size: 12px;
-  width: 400px;
+  width: 100%;
   height: 40px;
   padding: 8px 0 8px 15px;
   background: transparent;
   border: 0;
-  appearance: none;            /* remove arrow        */
-  -webkit-appearance: none;    /* remove arrow Chrome */
-  -moz-appearance: none;       /* remove arrow FF     */
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.select-wrapper select:disabled {
+  color: #fff;
+  font-family: Avenir-Book;
+  font-size: 12px;
+  width: 100%;
+  height: 40px;
+  padding: 8px 0 8px 15px;
+  background: rgba(34, 27, 230, 0.40);
+  border: 0;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
 }
 
 .select-wrapper select::-ms-expand{
-    display: none;             /* remove arrow IE     */
+  display: none;
 }
 
 .select-arrow {
@@ -146,66 +156,66 @@ h5 {
   right: 15px;
 }
 
-.select-arrow:nth-child(1) {
-  top: 18px;
-  border-top-color: #FFF;
+.inputContainer {
+  margin-bottom: 24px;
+  width: 416px;
 }
 
-.gridContainer {
-  display: grid;
+.textInput {
   width: 100%;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 24px;
-  margin-bottom: 50px;
-}
-
-.dateInputContainer {
-  width: 86px;
   height: 40px;
-  display: flex;
-}
-
-.dateButton {
-  visibility: hidden;
-  cursor: pointer;
-  position: absolute;
-}
-
-.dateTile {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  padding: 12px 20px;
+  padding: 8px 0 8px 15px;
   border: 2px solid #221BE6;
-  cursor: pointer;
-  box-shadow: inset 0 0 0 0 #221BE6;
-  -webkit-transition: ease-out 0.3s;
-  -moz-transition: ease-out 0.3s;
-  transition: ease-out 0.3s;
-}
-
-.dateTile:hover {
-  box-shadow: inset 130px 0 0 0 #221BE6;
-}
-
-.dateLabel {
+  background: transparent;
+  box-sizing:border-box;
   font-family: Avenir-Book;
   font-size: 12px;
   color: #fff;
-  cursor: pointer;
 }
 
-.dateButton:checked + .dateTile {
-  background: #221BE6;
+.textInput:disabled {
+  width: 100%;
+  height: 40px;
+  padding: 8px 0 8px 15px;
+  border: 2px solid #221BE6;
+  background: rgba(34, 27, 230, 0.40);
+  box-sizing:border-box;
+  font-family: Avenir-Book;
+  font-size: 12px;
+  color: #fff;
 }
 
-.priceDisplay {
-  font-size: 54px;
+.numberContainer {
+  margin-bottom: 24px;
+  width: 416px;
+}
+
+.numberInput {
+  width: 100%;
+  height: 40px;
+  padding: 8px 0 8px 15px;
+  border: 2px solid #221BE6;
+  background: transparent;
+  box-sizing:border-box;
+  font-family: Avenir-Book;
+  font-size: 12px;
+  color: #fff;
+}
+
+.numberInput:disabled {
+  width: 100%;
+  height: 40px;
+  padding: 8px 0 8px 15px;
+  border: 2px solid #221BE6;
+  background: rgba(34, 27, 230, 0.40);
+  box-sizing:border-box;
+  font-family: Avenir-Book;
+  font-size: 12px;
+  color: #fff;
 }
 
 .buttonContainer {
-  display: flex;
-  justify-content: center;
+  margin-bottom: 50px;
 }
 
 .previousButton {
@@ -222,6 +232,7 @@ h5 {
   -webkit-transition: ease-out 0.3s;
   -moz-transition: ease-out 0.3s;
   transition: ease-out 0.3s;
+  margin-top: 40px;
   margin-right: 12px;
 }
 
@@ -246,6 +257,7 @@ h5 {
   -webkit-transition: .3s;
   -moz-transition: .3s;
   -o-transition: .3s;
+  margin-top: 40px;
   margin-left: 12px;
 }
 

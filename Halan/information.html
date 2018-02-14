@@ -42,56 +42,57 @@
   </section>
 
   <div class="title">
-    <h2>Booking informations</h2>
+    <h2>Passenger informations</h2>
   </div>
 
   <section class="mainContainer">
 
     <form class="informationForm" name="inscription" method="post" action="">
+
+      <div class="inputContainer genderContainer">
+        <div class="select-wrapper">
+          <div class="select-arrow"></div>
+          <select>
+            <option value="" disabled selected>Title</option>
+            <option value="">Mr</option>
+            <option value="">Ms</option>
+            <option value="">Other</option>
+          </select>
+        </div>
+      </div>
+
       <div class="inputContainer nameContainer">
         <h5>Last Name</h5>
-        <div class="ahiuefh">
-          <input type="text" name="lastName" placeholder="Doe"/>
-        </div>
+        <input class="textInput nameInput" type="text" name="lastName" placeholder="Doe"/>
       </div>
 
       <div class="inputContainer firstNameContainer">
         <h5>First Name</h5>
-        <div class="ahiuefh">
-          <input type="text" name="firstName" placeholder="John">
-        </div>
+        <input class="textInput firstNameInput" type="text" name="firstName" placeholder="John">
       </div>
 
       <div class="inputContainer birthdayContainer">
         <h5>Date of birth</h5>
-        <div class="ahiuefh">
-          <input type="date" name="">
-        </div>
+        <input class="textInput birthdayInput" type="date" name="">
       </div>
 
       <div class="inputContainer mailContainer">
         <h5>Mail adress</h5>
-        <div class="ahiuefh">
-          <input type="mail" name="" placeholder="example@email.com">
-        </div>
+        <input class="textInput mailInput" type="mail" name="" placeholder="example@email.com">
       </div>
 
-      <div class="inputContainer mailContainer">
-        <div class="">
-          <h5>Heigth</h5>
-          <div class="ahiuefh">
-            <input type="number" name="" placeholder="180">
-          </div>
+      <div class="numberContainer heightContainer">
+        <h5>Height (cm)</h5>
+        <input class="numberInput" type="number" name="" placeholder="175">
         </div>
-        <div class="">
-          <h5>Weigth</h5>
-          <div class="ahiuefh">
-            <input type="number" name="" placeholder="80">
-          </div>
-        </div>
+      <div class="numberContainer weightContainer">
+        <h5>Weight (kg)</h5>
+        <input class="numberInput" type="number" name="" placeholder="75">
       </div>
+
+
       <div class="buttonContainer">
-        <input class="previousButton" type='submit' name='previous' value="Change Booking">
+        <input class="previousButton" type='submit' name='previous' value="Change booking info">
         <input class="continueButton" type='submit' name='continue' value="Continue">
       </div>
       <!-- PHP :

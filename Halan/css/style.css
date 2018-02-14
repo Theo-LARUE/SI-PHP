@@ -29,14 +29,6 @@ body {
   z-index: -1;
 }
 
-/* .bgCircle {
-  border-radius: 50%;
-  background-color: transparent;
-  border: 3px solid #FFF;
- 	width: 200px;
- 	height: 200px;
-} */
-
 .headerContainer {
   display: flex;
   flex-direction: row;
