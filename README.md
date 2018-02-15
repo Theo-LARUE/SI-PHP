@@ -19,6 +19,10 @@ de votre choix
 – Back office de gestion du contenu 
 
 
-### Lien pour le SiteMap sur google :
+### Lien pour le Sitemap sur google :
 
 * [Cliquez ici](https://docs.google.com/drawings/d/1nnf60BRBeIMtKQIumYpr28RtWv1pDVxi7tfdAARVU_U/edit?usp=sharing) (modifiable) :shipit:
+
+## Sitemap
+
+![](https://image.noelshack.com/fichiers/2018/07/4/1518713520-sitemap.png)

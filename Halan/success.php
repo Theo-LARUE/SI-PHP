@@ -1,3 +1,11 @@
+<?php
+session_start();
+include('db.php');
+$conn = db_connect("localhost", "si-13-02-18", "root", "theoloan");		// pass : concordia
+var_dump($_POST);
+var_dump($_SESSION);
+?>
+
 <html>
 
 <head>
@@ -41,9 +49,11 @@
         <i class="wastes"><i></i><i></i><i></i><i></i><i></i></i>
       </span>
     </div>
-      <input class="cancelButton" type="button" value="Cancel your adventure..."/>
-  </section>
+      <form action="delete.php?table=reservation ?id=">
+          <input class="cancelButton" type="button" value="Cancel your adventure..."/>
+      </form>
 
+  </section>
 
   <script type="text/javascript">
     particlesJS("particles-js", {

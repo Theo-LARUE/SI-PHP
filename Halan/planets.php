@@ -1,3 +1,9 @@
+<?php
+session_start();
+include('db.php');
+$conn = db_connect("localhost", "si-13-02-18", "root", "theoloan");		// pass: theoloan
+?>
+
 <html>
 
 <head>
@@ -46,7 +52,7 @@
 
   <section class="planetsContainer">
 
-    <form class="planetsForm" name="planetSelection" method="post" action="booking.php">
+    <form class="planetsForm" name="planetSelection" method="post" action="chooseplanet.php">
       <div class="gridContainer">
 
         <div class="planetCell">
@@ -58,7 +64,7 @@
         </div>
 
         <div class="planetCell">
-          <input id="planet2" class="planetButton" type="radio" name="radio" value="1"/>
+          <input id="planet2" class="planetButton" type="radio" name="radio" value="2"/>
           <div class="gridItem">
             <img class="planetImg" src="img/mars-transparent.png" alt="">
             <label for="planet2" class="planetLabel">Mars</label>
@@ -66,7 +72,7 @@
         </div>
 
         <div class="planetCell">
-          <input id="planet3" class="planetButton" type="radio" name="radio" value="1"/>
+          <input id="planet3" class="planetButton" type="radio" name="radio" value="3"/>
           <div class="gridItem">
             <img class="planetImg" src="img/mercury-transparent.png" alt="">
             <label for="planet3" class="planetLabel">Mercury</label>
@@ -74,7 +80,7 @@
         </div>
 
         <div class="planetCell">
-          <input id="planet4" class="planetButton" type="radio" name="radio" value="1"/>
+          <input id="planet4" class="planetButton" type="radio" name="radio" value="4"/>
           <div class="gridItem">
             <img class="planetImg" src="img/venus-transparent.png" alt="">
             <label for="planet4" class="planetLabel">Venus</label>
@@ -82,7 +88,7 @@
         </div>
 
         <div class="planetCell">
-          <input id="planet5" class="planetButton" type="radio" name="radio" value="1"/>
+          <input id="planet5" class="planetButton" type="radio" name="radio" value="5"/>
           <div class="gridItem">
             <img class="planetImg" src="img/xenion500-transparent.png" alt="">
             <label for="planet5" class="planetLabel">Xenion 500</label>
@@ -90,7 +96,7 @@
         </div>
 
         <div class="planetCell">
-          <input id="planet6" class="planetButton" type="radio" name="radio" value="1"/>
+          <input id="planet6" class="planetButton" type="radio" name="radio" value="6"/>
           <div class="gridItem">
             <img class="planetImg" src="img/europe-transparent.png" alt="">
             <label for="planet6" class="planetLabel">Europe</label>
@@ -104,8 +110,6 @@
 
     </form>
   </section>
-
-
 
   <script type="text/javascript">
     particlesJS("particles-js", {
@@ -219,7 +223,6 @@
       "retina_detect": true
     });
   </script>
-
 
 </body>
 

@@ -1,3 +1,10 @@
+<?php
+session_start();
+include('db.php');
+$conn = db_connect("localhost", "si-13-02-18", "root", "theoloan");
+var_dump($_SESSION);
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -47,16 +54,16 @@
 
   <section class="mainContainer">
 
-    <form class="informationForm" name="inscription" method="post" action="">
+    <form class="informationForm" name="inscription" method="post" action="recap.php">
 
       <div class="inputContainer genderContainer">
         <div class="select-wrapper">
           <div class="select-arrow"></div>
           <select>
             <option value="" disabled selected>Title</option>
-            <option value="">Mr</option>
-            <option value="">Ms</option>
-            <option value="">Other</option>
+            <option value="1">Mr</option>
+            <option value="2">Ms</option>
+            <option value="3">Other</option>
           </select>
         </div>
       </div>
@@ -73,21 +80,21 @@
 
       <div class="inputContainer birthdayContainer">
         <h5>Date of birth</h5>
-        <input class="textInput birthdayInput" type="date" name="">
+        <input class="textInput birthdayInput" type="date" name="date">
       </div>
 
       <div class="inputContainer mailContainer">
         <h5>Mail adress</h5>
-        <input class="textInput mailInput" type="mail" name="" placeholder="example@email.com">
+        <input class="textInput mailInput" type="mail" name="email" placeholder="example@email.com">
       </div>
 
       <div class="numberContainer heightContainer">
         <h5>Height (cm)</h5>
-        <input class="numberInput" type="number" name="" placeholder="175">
+        <input class="numberInput" type="number" name="height" placeholder="175">
         </div>
       <div class="numberContainer weightContainer">
         <h5>Weight (kg)</h5>
-        <input class="numberInput" type="number" name="" placeholder="75">
+        <input class="numberInput" type="number" name="weight" placeholder="75">
       </div>
 
 
