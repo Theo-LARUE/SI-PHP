@@ -24,3 +24,5 @@ de votre choix
 * [Cliquez ici](https://docs.google.com/drawings/d/1nnf60BRBeIMtKQIumYpr28RtWv1pDVxi7tfdAARVU_U/edit?usp=sharing) (modifiable) :shipit:
 
 ## Site Map
+
+![](https://image.noelshack.com/fichiers/2018/07/4/1518713520-sitemap.png)
