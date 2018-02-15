@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
 
 <head>
@@ -8,7 +7,7 @@
   <link rel="shortcut icon" href="img/favicon.png">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/font.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/planets.css">
   <script src="scripts/particles.min.js"></script>
   <title>Halan</title>
 </head>
@@ -31,22 +30,82 @@
     </div>
   </header>
 
-  <div class="mainContainer">
-    <div class="mainContainer-content">
-      <h1 class="mainTitle">Safely going, beyond infinite.</h1>
-      <div class="mainDescription">
-        <p class="mainDescription-text">
-          Halan is a space travel company providing the ultimate experience for outer space travel with feature destinations such as the Moon, Mars or Europa. One of our top features is our cheeky customer service and speed - we can get you anywhere safely in our universe within 1 day.
-        </p>
-      </div>
-      <img class="backgroundImg" src="img/bg-image.png" alt="oops">
-      <form>
-        <input class="startButton" type="button" value="Book your adventure" onclick="window.location.href='planets.html'" />
-      </form>
+  <section class="steps">
+    <div class="stepsContainer">
+      <h4 class="step step1">1</h4>
+      <div class="stepSeparator1"></div>
+      <h4 class="step step2">2</h4>
+      <div class="stepSeparator2"></div>
+      <h4 class="step step3">3</h4>
     </div>
-    <!-- <div class="bgCircle"></div>
-    <div class="bgCircle"></div> -->
+  </section>
+
+  <div class="title">
+    <h2>Select your destination</h2>
   </div>
+
+  <section class="planetsContainer">
+
+    <form class="planetsForm" name="planetSelection" method="post" action="booking.html">
+      <div class="gridContainer">
+
+        <div class="planetCell">
+          <input id="planet1" class="planetButton" type="radio" name="radio" value="1"/>
+          <div class="gridItem">
+            <img class="planetImg" src="img/moon-transparent.png" alt="">
+            <label for="planet1" class="planetLabel">Moon</label>
+          </div>
+        </div>
+
+        <div class="planetCell">
+          <input id="planet2" class="planetButton" type="radio" name="radio" value="1"/>
+          <div class="gridItem">
+            <img class="planetImg" src="img/mars-transparent.png" alt="">
+            <label for="planet2" class="planetLabel">Mars</label>
+          </div>
+        </div>
+
+        <div class="planetCell">
+          <input id="planet3" class="planetButton" type="radio" name="radio" value="1"/>
+          <div class="gridItem">
+            <img class="planetImg" src="img/mercury-transparent.png" alt="">
+            <label for="planet3" class="planetLabel">Mercury</label>
+          </div>
+        </div>
+
+        <div class="planetCell">
+          <input id="planet4" class="planetButton" type="radio" name="radio" value="1"/>
+          <div class="gridItem">
+            <img class="planetImg" src="img/venus-transparent.png" alt="">
+            <label for="planet4" class="planetLabel">Venus</label>
+          </div>
+        </div>
+
+        <div class="planetCell">
+          <input id="planet5" class="planetButton" type="radio" name="radio" value="1"/>
+          <div class="gridItem">
+            <img class="planetImg" src="img/xenion500-transparent.png" alt="">
+            <label for="planet5" class="planetLabel">Xenion 500</label>
+          </div>
+        </div>
+
+        <div class="planetCell">
+          <input id="planet6" class="planetButton" type="radio" name="radio" value="1"/>
+          <div class="gridItem">
+            <img class="planetImg" src="img/europe-transparent.png" alt="">
+            <label for="planet6" class="planetLabel">Europe</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="buttonContainer">
+        <input class="continueButton" type='submit' name='continue' value="Continue">
+      </div>
+
+    </form>
+  </section>
+
+
 
   <script type="text/javascript">
     particlesJS("particles-js", {
@@ -160,6 +219,8 @@
       "retina_detect": true
     });
   </script>
+
+
 </body>
 
 </html>

@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
 
 <head>
@@ -8,7 +7,7 @@
   <link rel="shortcut icon" href="img/favicon.png">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/font.css">
-  <link rel="stylesheet" href="css/planets.css">
+  <link rel="stylesheet" href="css/recap.css">
   <script src="scripts/particles.min.js"></script>
   <title>Halan</title>
 </head>
@@ -42,70 +41,92 @@
   </section>
 
   <div class="title">
-    <h2>Select your destination</h2>
+    <h2>Recap</h2>
   </div>
 
-  <section class="planetsContainer">
+  <section class="mainContainer">
 
-    <form class="planetsForm" name="planetSelection" method="post" action="booking.html">
-      <div class="gridContainer">
+    <form class="informationForm" name="inscription" method="post" action="">
 
-        <div class="planetCell">
-          <input id="planet1" class="planetButton" type="radio" name="radio" value="1"/>
-          <div class="gridItem">
-            <img class="planetImg" src="img/moon-transparent.png" alt="">
-            <label for="planet1" class="planetLabel">Moon</label>
-          </div>
-        </div>
-
-        <div class="planetCell">
-          <input id="planet2" class="planetButton" type="radio" name="radio" value="1"/>
-          <div class="gridItem">
-            <img class="planetImg" src="img/mars-transparent.png" alt="">
-            <label for="planet2" class="planetLabel">Mars</label>
-          </div>
-        </div>
-
-        <div class="planetCell">
-          <input id="planet3" class="planetButton" type="radio" name="radio" value="1"/>
-          <div class="gridItem">
-            <img class="planetImg" src="img/mercury-transparent.png" alt="">
-            <label for="planet3" class="planetLabel">Mercury</label>
-          </div>
-        </div>
-
-        <div class="planetCell">
-          <input id="planet4" class="planetButton" type="radio" name="radio" value="1"/>
-          <div class="gridItem">
-            <img class="planetImg" src="img/venus-transparent.png" alt="">
-            <label for="planet4" class="planetLabel">Venus</label>
-          </div>
-        </div>
-
-        <div class="planetCell">
-          <input id="planet5" class="planetButton" type="radio" name="radio" value="1"/>
-          <div class="gridItem">
-            <img class="planetImg" src="img/xenion500-transparent.png" alt="">
-            <label for="planet5" class="planetLabel">Xenion 500</label>
-          </div>
-        </div>
-
-        <div class="planetCell">
-          <input id="planet6" class="planetButton" type="radio" name="radio" value="1"/>
-          <div class="gridItem">
-            <img class="planetImg" src="img/europe-transparent.png" alt="">
-            <label for="planet6" class="planetLabel">Europe</label>
-          </div>
+      <div class="inputContainer genderContainer">
+        <h5>From</h5>
+        <div class="select-wrapper">
+          <div class="select-arrow"></div>
+          <select disabled>
+            <option value="">From1</option>
+            <option value="">From2</option>
+            <option value="">From3</option>
+            <option value="">From4</option>
+          </select>
         </div>
       </div>
+
+      <div class="inputContainer planetContainer">
+        <h5>Destination</h5>
+        <div class="select-wrapper">
+          <div class="select-arrow"></div>
+          <select disabled>
+            <option value="">Moon</option>
+            <option value="">Mars</option>
+            <option value="">Mercury</option>
+            <option value="">Venus</option>
+            <option value="">Xenion 500</option>
+            <option value="">Europe</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="inputContainer genderContainer">
+        <h5>Civility</h5>
+        <div class="select-wrapper">
+          <div class="select-arrow"></div>
+          <select disabled>
+            <option value="">Mr</option>
+            <option value="">Ms</option>
+            <option value="">Other</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="inputContainer nameContainer">
+        <h5>Last Name</h5>
+        <input disabled class="textInput nameInput" type="text" name="lastName" placeholder="Doe" value="Doe"/>
+      </div>
+
+      <div class="inputContainer firstNameContainer">
+        <h5>First Name</h5>
+        <input disabled class="textInput firstNameInput" type="text" name="firstName" placeholder="John" value="John">
+      </div>
+
+      <div class="inputContainer birthdayContainer">
+        <h5>Date of birth</h5>
+        <input disabled class="textInput birthdayInput" type="date" name="" value="2018-02-14">
+      </div>
+
+      <div class="inputContainer mailContainer">
+        <h5>Mail adress</h5>
+        <input disabled class="textInput mailInput" type="mail" name="" placeholder="example@email.com" value="example@email.com">
+      </div>
+
+      <div class="numberContainer heightContainer">
+        <h5>Height (cm)</h5>
+        <input disabled class="numberInput" type="number" name="" placeholder="175" value="175">
+        </div>
+      <div class="numberContainer weightContainer">
+        <h5>Weight (kg)</h5>
+        <input disabled class="numberInput" type="number" name="" placeholder="75" value="75">
+      </div>
+
 
       <div class="buttonContainer">
-        <input class="continueButton" type='submit' name='continue' value="Continue">
+        <input id="editButton" class="previousButton" type='button' name='previous' value="Edit informations">
+        <input class="continueButton" type='submit' name='continue' value="Confirm">
       </div>
-
+      <!-- PHP :
+      if(isset($_POST['previous'])) { /* ...clear and reset stuff... */ }
+      else if(isset($_POST['continue']) { /* ...submit stuff... */ } -->
     </form>
   </section>
-
 
 
   <script type="text/javascript">
@@ -218,6 +239,22 @@
         }
       },
       "retina_detect": true
+    });
+  </script>
+
+  <script>
+    var edit_btn = document.querySelector('.previousButton');
+
+    edit_btn.addEventListener('click', function(){
+      var inputlist = document.querySelectorAll('input');
+      for (var i = 0; i < inputlist.length; i++) {
+        inputlist[i].removeAttribute('disabled');
+      }
+      var selectlist = document.querySelectorAll('select')
+      for (var i = 0; i < selectlist.length; i++) {
+        selectlist[i].removeAttribute('disabled');
+      }
+      window.scroll({top: 0, left: 0, behavior: 'smooth' });
     });
   </script>
 
