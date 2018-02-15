@@ -18,7 +18,7 @@
   <header>
     <div class="headerContainer">
       <div class="logoContainer">
-        <a href="index.html">
+        <a href="index.php">
           <img class="logoImg" src="img/logo_gradient_Gradient.svg" alt="Logo Halan">
         </a>
       </div>
@@ -46,7 +46,7 @@
 
   <section class="planetsContainer">
 
-    <form class="planetsForm" name="planetSelection" method="post" action="booking.html">
+    <form class="planetsForm" name="planetSelection" method="post" action="booking.php">
       <div class="gridContainer">
 
         <div class="planetCell">

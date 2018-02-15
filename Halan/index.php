@@ -18,7 +18,7 @@
   <header>
     <div class="headerContainer">
       <div class="logoContainer">
-        <a href="index.html">
+        <a href="index.php">
           <img class="logoImg" src="img/logo_gradient_Gradient.svg" alt="Logo Halan">
         </a>
       </div>
@@ -40,7 +40,7 @@
       </div>
       <img class="backgroundImg" src="img/bg-image.png" alt="oops">
       <form>
-        <input class="startButton" type="button" value="Book your adventure" onclick="window.location.href='planets.html'" />
+        <input class="startButton" type="button" value="Book your adventure" onclick="window.location.href='planets.php'" />
       </form>
     </div>
     <!-- <div class="bgCircle"></div>
