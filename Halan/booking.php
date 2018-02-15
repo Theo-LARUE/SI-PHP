@@ -2,6 +2,18 @@
 session_start();
 include('db.php');
 $conn = db_connect("localhost", "si-13-02-18", "root", "theoloan");
+
+$requete="SELECT PlanetName, Price, Image FROM `destination` WHERE `ìd` = :destination_id";
+$stmt= $conn->prepare($requete);
+$stmt->execute();
+
+$requete2="SELECT * FROM `date`";
+$stmt2= $conn->prepare($requete2);
+$stmt2->execute();
+
+$requete3="SELECT * FROM `lieu`";
+$stmt3= $conn->prepare($requete3);
+$stmt3->execute();
 ?>
 
 <html>
@@ -53,9 +65,12 @@ $conn = db_connect("localhost", "si-13-02-18", "root", "theoloan");
   <section class="mainContainer">
     <div class="destinationContainer">
       <h5>Destination</h5>
-      <img src="img/mars-transparent.png" alt="Selected Planet Image" class="selectedPlanet">
-      <h3>Mars</h3>
+
+      <img src="img/<?= $row['Image'].$row[id]?>" alt="Selected Planet Image" class="selectedPlanet">
+      <h3><?=$row['PlanetName']?></h3>
+
     </div>
+
 
     <form class="informationForm" name="inscription" method="post" action="choosedate.php">
       <div class="fromDateContainer">
@@ -64,52 +79,26 @@ $conn = db_connect("localhost", "si-13-02-18", "root", "theoloan");
           <div class="select-wrapper">
             <div class="select-arrow"></div>
             <select name="radio">
-              <option value="1">Test1</option>
-              <option value="2">Test2</option>
-              <option value="3">Test3</option>
-              <option value="4">Test4</option>
-              <option value="5">Test5</option>
+            <?php while (false !==$row3=$stmt3->fetch(PDO::FETCH_ASSOC)):
+            ?>
+              <option value="<?=$row3['id']?>"><?=$row3['Lieu']?></option>
+            <?php endwhile;?>
             </select>
           </div>
         </div>
 
         <div class="datesContainer">
           <h5>Available dates</h5>
+            <?php while (false !==$row2=$stmt2->fetch(PDO::FETCH_ASSOC)):
+            ?>
           <div class="gridContainer">
             <div class="dateInputContainer">
-              <input id="date1" class="dateButton" type="radio" name="radio" value="1"/>
+              <input id="date<?=$row2['id']?>" class="dateButton" type="radio" name="radio" value="<?=$row2['id']?>"/>
               <div class="dateTile">
-                <label for="date1" class="dateLabel">20/02</label>
+                <label for="date<?=$row2['id']?>" class="dateLabel"><?=$row2['Date']?></label>
               </div>
             </div>
-
-            <div class="dateInputContainer">
-              <input id="date2" class="dateButton" type="radio" name="radio" value="1"/>
-              <div class="dateTile">
-                <label for="date2" class="dateLabel">20/02</label>
-              </div>
-            </div>
-
-            <div class="dateInputContainer">
-              <input id="date3" class="dateButton" type="radio" name="radio" value="1"/>
-              <div class="dateTile">
-                <label for="date3" class="dateLabel">20/02</label>
-              </div>
-            </div>
-
-            <div class="dateInputContainer">
-              <input id="date4" class="dateButton" type="radio" name="radio" value="1"/>
-              <div class="dateTile">
-                <label for="date4" class="dateLabel">20/02</label>
-              </div>
-            </div>
-
-            <div class="dateInputContainer">
-              <input id="date5" class="dateButton" type="radio" name="radio" value="1"/>
-              <div class="dateTile">
-                <label for="date5" class="dateLabel">20/02</label>
-              </div>
-            </div>
+              <?php endwhile;?>
           </div>
 
         </div>

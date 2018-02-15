@@ -108,12 +108,12 @@ $conn = db_connect("localhost", "si-13-02-18", "root", "theoloan");
 
       <div class="inputContainer birthdayContainer">
         <h5>Date of birth</h5>
-        <input disabled class="textInput birthdayInput" type="date" name="" value="<?= $_POST['date']; ?>">
+        <input disabled class="textInput birthdayInput" type="date" name="date" value="<?= $_POST['date']; ?>">
       </div>
 
       <div class="inputContainer mailContainer">
         <h5>Mail adress</h5>
-        <input disabled class="textInput mailInput" type="mail" name="" placeholder="example@email.com" value="<?= $_POST['email']; ?>">
+        <input disabled class="textInput mailInput" type="mail" name="email" placeholder="example@email.com" value="<?= $_POST['email']; ?>">
       </div>
 
       <div class="numberContainer heightContainer">

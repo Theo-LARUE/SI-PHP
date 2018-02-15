@@ -2,6 +2,10 @@
 session_start();
 include('db.php');
 $conn = db_connect("localhost", "si-13-02-18", "root", "theoloan");		// pass: theoloan
+$requete="SELECT * FROM `destination`";
+$stmt= $conn->prepare($requete);
+$stmt->execute();
+//var_dump($row=$stmt->fetch());
 ?>
 
 <html>
@@ -55,54 +59,17 @@ $conn = db_connect("localhost", "si-13-02-18", "root", "theoloan");		// pass: th
     <form class="planetsForm" name="planetSelection" method="post" action="chooseplanet.php">
       <div class="gridContainer">
 
+      <?php while (false !==$row=$stmt->fetch(PDO::FETCH_ASSOC)):
+      ?>
         <div class="planetCell">
-          <input id="planet1" class="planetButton" type="radio" name="radio" value="1"/>
+          <input id="planet<?=$row['id']?>" class="planetButton" type="radio" name="radio" value="<?=$row['id']?>"/>
           <div class="gridItem">
-            <img class="planetImg" src="img/moon-transparent.png" alt="">
-            <label for="planet1" class="planetLabel">Moon</label>
+            <img class="planetImg" src="img/<?= $row['Image']?>" alt="">
+            <label for="planet<?=$row['id']?>" class="planetLabel"><?= $row['PlanetName']?></label>
           </div>
         </div>
-
-        <div class="planetCell">
-          <input id="planet2" class="planetButton" type="radio" name="radio" value="2"/>
-          <div class="gridItem">
-            <img class="planetImg" src="img/mars-transparent.png" alt="">
-            <label for="planet2" class="planetLabel">Mars</label>
-          </div>
-        </div>
-
-        <div class="planetCell">
-          <input id="planet3" class="planetButton" type="radio" name="radio" value="3"/>
-          <div class="gridItem">
-            <img class="planetImg" src="img/mercury-transparent.png" alt="">
-            <label for="planet3" class="planetLabel">Mercury</label>
-          </div>
-        </div>
-
-        <div class="planetCell">
-          <input id="planet4" class="planetButton" type="radio" name="radio" value="4"/>
-          <div class="gridItem">
-            <img class="planetImg" src="img/venus-transparent.png" alt="">
-            <label for="planet4" class="planetLabel">Venus</label>
-          </div>
-        </div>
-
-        <div class="planetCell">
-          <input id="planet5" class="planetButton" type="radio" name="radio" value="5"/>
-          <div class="gridItem">
-            <img class="planetImg" src="img/xenion500-transparent.png" alt="">
-            <label for="planet5" class="planetLabel">Xenion 500</label>
-          </div>
-        </div>
-
-        <div class="planetCell">
-          <input id="planet6" class="planetButton" type="radio" name="radio" value="6"/>
-          <div class="gridItem">
-            <img class="planetImg" src="img/europe-transparent.png" alt="">
-            <label for="planet6" class="planetLabel">Europe</label>
-          </div>
-        </div>
-      </div>
+      <?php endwhile;?>
+    </div>
 
       <div class="buttonContainer">
         <input class="continueButton" type='submit' name='continue' value="Continue">
