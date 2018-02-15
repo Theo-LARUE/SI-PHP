@@ -21,4 +21,4 @@ de votre choix
 
 ### Lien pour le SiteMap sur google :
 
-* [Cliquez ici](https://docs.google.com/drawings/d/1nnf60BRBeIMtKQIumYpr28RtWv1pDVxi7tfdAARVU_U/edit?usp=sharing) :shipit:
+* [Cliquez ici](https://docs.google.com/drawings/d/1nnf60BRBeIMtKQIumYpr28RtWv1pDVxi7tfdAARVU_U/edit?usp=sharing) (modifiable) :shipit:
