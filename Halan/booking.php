@@ -1,3 +1,9 @@
+<?php
+session_start();
+include('db.php');
+$conn = db_connect("localhost", "si-13-02-18", "root", "theoloan");
+?>
+
 <html>
 
 <head>
@@ -51,16 +57,18 @@
       <h3>Mars</h3>
     </div>
 
-    <form class="informationForm" name="inscription" method="post" action="">
+    <form class="informationForm" name="inscription" method="post" action="choosedate.php">
       <div class="fromDateContainer">
         <div class="fromContainer">
           <h5>From</h5>
           <div class="select-wrapper">
             <div class="select-arrow"></div>
-            <select>
-              <option>Test1</option>
-              <option>Test2</option>
-              <option>Test3</option>
+            <select name="radio">
+              <option value="1">Test1</option>
+              <option value="2">Test2</option>
+              <option value="3">Test3</option>
+              <option value="4">Test4</option>
+              <option value="5">Test5</option>
             </select>
           </div>
         </div>
@@ -69,35 +77,35 @@
           <h5>Available dates</h5>
           <div class="gridContainer">
             <div class="dateInputContainer">
-              <input id="date1" class="dateButton" type="radio" name="radio"/>
+              <input id="date1" class="dateButton" type="radio" name="radio" value="1"/>
               <div class="dateTile">
                 <label for="date1" class="dateLabel">20/02</label>
               </div>
             </div>
 
             <div class="dateInputContainer">
-              <input id="date2" class="dateButton" type="radio" name="radio"/>
+              <input id="date2" class="dateButton" type="radio" name="radio" value="1"/>
               <div class="dateTile">
                 <label for="date2" class="dateLabel">20/02</label>
               </div>
             </div>
 
             <div class="dateInputContainer">
-              <input id="date3" class="dateButton" type="radio" name="radio"/>
+              <input id="date3" class="dateButton" type="radio" name="radio" value="1"/>
               <div class="dateTile">
                 <label for="date3" class="dateLabel">20/02</label>
               </div>
             </div>
 
             <div class="dateInputContainer">
-              <input id="date4" class="dateButton" type="radio" name="radio"/>
+              <input id="date4" class="dateButton" type="radio" name="radio" value="1"/>
               <div class="dateTile">
                 <label for="date4" class="dateLabel">20/02</label>
               </div>
             </div>
 
             <div class="dateInputContainer">
-              <input id="date5" class="dateButton" type="radio" name="radio"/>
+              <input id="date5" class="dateButton" type="radio" name="radio" value="1"/>
               <div class="dateTile">
                 <label for="date5" class="dateLabel">20/02</label>
               </div>
@@ -108,7 +116,7 @@
       </div>
       <div class="buttonContainer">
         <input class="previousButton" type='submit' name='previous' value="Change destination" formaction="planets.php">
-        <input class="continueButton" type='submit' name='continue' value="Continue" formaction="information.php">
+        <input class="continueButton" type='submit' name='continue' value="Continue" formaction="choosedate.php">
       </div>
     </form>
 

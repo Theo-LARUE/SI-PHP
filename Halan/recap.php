@@ -1,3 +1,9 @@
+<?php
+session_start();
+include('db.php');
+$conn = db_connect("localhost", "si-13-02-18", "root", "theoloan");
+?>
+
 <html>
 
 <head>
@@ -53,10 +59,12 @@
         <div class="select-wrapper">
           <div class="select-arrow"></div>
           <select disabled>
-            <option value="">From1</option>
-            <option value="">From2</option>
-            <option value="">From3</option>
-            <option value="">From4</option>
+            <option value="1">From1</option>
+            <option value="2">From2</option>
+            <option value="3">From3</option>
+            <option value="4">From4</option>
+            <option value="5">From5</option>
+
           </select>
         </div>
       </div>
@@ -66,12 +74,12 @@
         <div class="select-wrapper">
           <div class="select-arrow"></div>
           <select disabled>
-            <option value="">Moon</option>
-            <option value="">Mars</option>
-            <option value="">Mercury</option>
-            <option value="">Venus</option>
-            <option value="">Xenion 500</option>
-            <option value="">Europe</option>
+            <option value="1">Moon</option>
+            <option value="2" selected>Mars</option>
+            <option value="3">Mercury</option>
+            <option value="4">Venus</option>
+            <option value="5">Xenion 500</option>
+            <option value="6">Europe</option>
           </select>
         </div>
       </div>
@@ -81,46 +89,46 @@
         <div class="select-wrapper">
           <div class="select-arrow"></div>
           <select disabled>
-            <option value="">Mr</option>
-            <option value="">Ms</option>
-            <option value="">Other</option>
+            <option value="1">Mr</option>
+            <option value="2">Ms</option>
+            <option value="3">Other</option>
           </select>
         </div>
       </div>
 
       <div class="inputContainer nameContainer">
         <h5>Last Name</h5>
-        <input disabled class="textInput nameInput" type="text" name="lastName" placeholder="Doe" value="Doe"/>
+        <input disabled class="textInput nameInput" type="text" name="lastName" placeholder="Doe" value="<?= $_POST['lastName']; ?>"/>
       </div>
 
       <div class="inputContainer firstNameContainer">
         <h5>First Name</h5>
-        <input disabled class="textInput firstNameInput" type="text" name="firstName" placeholder="John" value="John">
+        <input disabled class="textInput firstNameInput" type="text" name="firstName" placeholder="John" value="<?= $_POST['firstName']; ?>">
       </div>
 
       <div class="inputContainer birthdayContainer">
         <h5>Date of birth</h5>
-        <input disabled class="textInput birthdayInput" type="date" name="" value="2018-02-14">
+        <input disabled class="textInput birthdayInput" type="date" name="" value="<?= $_POST['date']; ?>">
       </div>
 
       <div class="inputContainer mailContainer">
         <h5>Mail adress</h5>
-        <input disabled class="textInput mailInput" type="mail" name="" placeholder="example@email.com" value="example@email.com">
+        <input disabled class="textInput mailInput" type="mail" name="" placeholder="example@email.com" value="<?= $_POST['email']; ?>">
       </div>
 
       <div class="numberContainer heightContainer">
         <h5>Height (cm)</h5>
-        <input disabled class="numberInput" type="number" name="" placeholder="175" value="175">
+        <input disabled class="numberInput" type="number" name="height" placeholder="175" value="<?= $_POST['height']; ?>">
         </div>
       <div class="numberContainer weightContainer">
         <h5>Weight (kg)</h5>
-        <input disabled class="numberInput" type="number" name="" placeholder="75" value="75">
+        <input disabled class="numberInput" type="number" name="weight" placeholder="75" value="<?= $_POST['weight']; ?>">
       </div>
 
 
       <div class="buttonContainer">
         <input id="editButton" class="previousButton" type='button' name='previous' value="Edit informations">
-        <input class="continueButton" type='submit' name='continue' value="Confirm" formaction="success.php">
+        <input class="continueButton" type='submit' name='continue' value="Confirm" formaction="chooseuser.php">
       </div>
       <!-- PHP :
       if(isset($_POST['previous'])) { /* ...clear and reset stuff... */ }
