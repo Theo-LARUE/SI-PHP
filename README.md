@@ -17,3 +17,8 @@ groupe n°18 :
 de votre choix 
 
 – Back office de gestion du contenu 
+
+
+### Lien pour le SiteMap sur google :
+
+* [Cliquez ici](https://docs.google.com/drawings/d/1nnf60BRBeIMtKQIumYpr28RtWv1pDVxi7tfdAARVU_U/edit?usp=sharing)
