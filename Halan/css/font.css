@@ -1,44 +1,44 @@
 @font-face {
   font-family: 'Avenir-Black';
-  src: url('fonts/Avenir-Black.eot');
-  src: url('fonts/Avenir-Black.svg#Avenir-Black') format('svg'),
-       url('fonts/Avenir-Black.eot?#iefix') format('embedded-opentype');
+  src: url('/fonts/Avenir-Black.eot');
+  src: url('/fonts/Avenir-Black.svg#Avenir-Black') format('svg'),
+       url('/fonts/Avenir-Black.eot?#iefix') format('embedded-opentype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Avenir-BlackOblique';
-  src: url('fonts/Avenir-BlackOblique.eot');
-  src: url('fonts/Avenir-BlackOblique.woff2') format('woff2'),
-       url('fonts/Avenir-BlackOblique.woff') format('woff'),
-       url('fonts/Avenir-BlackOblique.ttf') format('truetype'),
-       url('fonts/Avenir-BlackOblique.svg#Avenir-BlackOblique') format('svg'),
-       url('fonts/Avenir-BlackOblique.eot?#iefix') format('embedded-opentype');
+  src: url('/fonts/Avenir-BlackOblique.eot');
+  src: url('/fonts/Avenir-BlackOblique.woff2') format('woff2'),
+       url('/fonts/Avenir-BlackOblique.woff') format('woff'),
+       url('/fonts/Avenir-BlackOblique.ttf') format('truetype'),
+       url('/fonts/Avenir-BlackOblique.svg#Avenir-BlackOblique') format('svg'),
+       url('/fonts/Avenir-BlackOblique.eot?#iefix') format('embedded-opentype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Avenir-Book';
-  src: url('fonts/Avenir-Book.eot');
-  src: url('fonts/Avenir-Book.woff2') format('woff2'),
-       url('fonts/Avenir-Book.woff') format('woff'),
-       url('fonts/Avenir-Book.ttf') format('truetype'),
-       url('fonts/Avenir-Book.svg#Avenir-Book') format('svg'),
-       url('fonts/Avenir-Book.eot?#iefix') format('embedded-opentype');
+  src: url('/fonts/Avenir-Book.eot');
+  src: url('/fonts/Avenir-Book.woff2') format('woff2'),
+       url('/fonts/Avenir-Book.woff') format('woff'),
+       url('/fonts/Avenir-Book.ttf') format('truetype'),
+       url('/fonts/Avenir-Book.svg#Avenir-Book') format('svg'),
+       url('/fonts/Avenir-Book.eot?#iefix') format('embedded-opentype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Avenir-BookOblique';
-  src: url('fonts/Avenir-BookOblique.eot');
-  src: url('fonts/Avenir-BookOblique.woff2') format('woff2'),
-       url('fonts/Avenir-BookOblique.woff') format('woff'),
-       url('fonts/Avenir-BookOblique.ttf') format('truetype'),
-       url('fonts/Avenir-BookOblique.svg#Avenir-BookOblique') format('svg'),
-       url('fonts/Avenir-BookOblique.eot?#iefix') format('embedded-opentype');
+  src: url('/fonts/Avenir-BookOblique.eot');
+  src: url('/fonts/Avenir-BookOblique.woff2') format('woff2'),
+       url('/fonts/Avenir-BookOblique.woff') format('woff'),
+       url('/fonts/Avenir-BookOblique.ttf') format('truetype'),
+       url('/fonts/Avenir-BookOblique.svg#Avenir-BookOblique') format('svg'),
+       url('/fonts/Avenir-BookOblique.eot?#iefix') format('embedded-opentype');
   font-weight: normal;
   font-style: normal;
 }
