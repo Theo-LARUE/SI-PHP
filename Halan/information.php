@@ -92,8 +92,8 @@
 
 
       <div class="buttonContainer">
-        <input class="previousButton" type='submit' name='previous' value="Change booking info">
-        <input class="continueButton" type='submit' name='continue' value="Continue">
+        <input class="previousButton" type='submit' name='previous' value="Change booking info" formaction="booking.php">
+        <input class="continueButton" type='submit' name='continue' value="Continue" formaction="recap.php">
       </div>
       <!-- PHP :
       if(isset($_POST['previous'])) { /* ...clear and reset stuff... */ }

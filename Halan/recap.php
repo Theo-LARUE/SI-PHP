@@ -120,7 +120,7 @@
 
       <div class="buttonContainer">
         <input id="editButton" class="previousButton" type='button' name='previous' value="Edit informations">
-        <input class="continueButton" type='submit' name='continue' value="Confirm">
+        <input class="continueButton" type='submit' name='continue' value="Confirm" formaction="success.php">
       </div>
       <!-- PHP :
       if(isset($_POST['previous'])) { /* ...clear and reset stuff... */ }
