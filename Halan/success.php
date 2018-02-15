@@ -34,13 +34,14 @@
     <h2 class="successTitle">Congratulations !</h2>
       <p>You successfully registered to a flight aboard the Halan spaceship ! Check your mail to find your ticket.</p>
     <div class="rocket">
-      <span>
+        <span>
         <i class="fin-top"></i>
         <i class="fin-bottom"></i>
         <i class="faya"></i>
         <i class="wastes"><i></i><i></i><i></i><i></i><i></i></i>
       </span>
     </div>
+      <input class="cancelButton" type="button" value="Cancel your adventure..."/>
   </section>
 
 

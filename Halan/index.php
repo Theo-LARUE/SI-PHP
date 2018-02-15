@@ -43,8 +43,6 @@
         <input class="startButton" type="button" value="Book your adventure" onclick="window.location.href='planets.php'" />
       </form>
     </div>
-    <!-- <div class="bgCircle"></div>
-    <div class="bgCircle"></div> -->
   </div>
 
   <script type="text/javascript">

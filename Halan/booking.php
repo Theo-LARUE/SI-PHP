@@ -107,12 +107,9 @@
         </div>
       </div>
       <div class="buttonContainer">
-        <input class="previousButton" type='submit' name='previous' value="Change destination">
-        <input class="continueButton" type='submit' name='continue' value="Continue">
+        <input class="previousButton" type='submit' name='previous' value="Change destination" formaction="planets.php">
+        <input class="continueButton" type='submit' name='continue' value="Continue" formaction="information.php">
       </div>
-      <!-- PHP :
-      if(isset($_POST['previous'])) { /* ...clear and reset stuff... */ }
-      else if(isset($_POST['continue']) { /* ...submit stuff... */ } -->
     </form>
 
     <div class="priceContainer">
@@ -120,7 +117,7 @@
       <h2 class="priceDisplay">599€</h2>
     </div>
   </section>
-
+~
   <script type="text/javascript">
     particlesJS("particles-js", {
       "particles": {
